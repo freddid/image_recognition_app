@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Результат распознавания</title>
+</head>
+
+<body>
+   <h1>Результат распознавания изображения</h1>
+   <img src="{{ url_for('static', filename='uploads/' + file_path.split('/')[-1]) }}" alt="Uploaded Image">
+   <p>Класс изображения: {{ predicted_class }}</p>
+   <a href="{{ url_for('index') }}">Загрузить другое изображение</a>
+</body>
+
+</html>

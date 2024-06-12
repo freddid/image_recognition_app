@@ -1,0 +1,26 @@
+# Файлы, создаваемые Python и Flask
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Виртуальное окружение Python (если используется)
+venv/
+ENV/
+
+# Файлы настроек среды и зависимости
+*.env
+*.log
+*.sqlitedb
+*.sqlite3
+*.db
+*.cache
+
+# Локальные настройки IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

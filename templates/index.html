@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Image Recognition</title>
+</head>
+
+<body>
+   <h1>Загрузка изображения для распознавания</h1>
+
+   <!-- Форма для загрузки изображения из файла -->
+   <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*">
+      <input type="submit" value="Загрузить">
+   </form>
+
+   <hr>
+
+   <!-- Захват изображения с веб-камеры -->
+   <h2>Или сделать фото с веб-камеры</h2>
+   <video id="video" width="320" height="240" autoplay></video>
+   <button id="captureButton">Сделать фото</button>
+   <canvas id="canvas" width="320" height="240" style="display:none;"></canvas>
+   <img id="capturedImage" src="#" alt="Captured Image" style="display:none;">
+
+   <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="imageData" id="imageData">
+      <input type="submit" value="Загрузить фото" id="uploadButton" style="display:none;">
+   </form>
+
+   <script src="{{ url_for('static', filename='js/camera.js') }}"></script>
+</body>
+
+</html>
